@@ -2,6 +2,9 @@
 This repository explores basic functionalities of langfuse, specifically its prompt management and its tracing. 
 It is an exploratory repository. 
 
+The prompt being tested is exactly as follows: 
+`hello, my name is {{var_one}}, I am testing adding a variable. Please say {{var_two}} !`
+
 # Set up 
 Create a conda environment and then run: 
 ```bash 

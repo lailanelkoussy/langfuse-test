@@ -53,7 +53,8 @@ async def generate_stream(query: str, max_new_tokens: int = 1024):
     try:
         # Get production prompt
         prompt = langfuse.get_prompt("other-test-prompt")
-        new_prompt = prompt.compile(var_name="Laila")
+        # variable names can only be alpha + underscores
+        new_prompt = prompt.compile(var_one="Laila", var_two="Welcome")
         # Can be used as alternative to the langfuse openai sdk + the parameter langfuse_prompt
         #langfuse_context.update_current_observation(prompt=prompt,)
         logger.info(new_prompt)
